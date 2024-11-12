@@ -22,6 +22,10 @@ class StringData(BaseModel):
 async def mock_get():
   return {"message": "Hello from FastAPI"}
 
+@app.get("/data")
+async def mock_get():
+  return {"message": "Hello from FastAPI"}
+
 @app.post("/")
 async def calculate_maxflow(data: StringData):
   maxFlow = dinic_main_function(
