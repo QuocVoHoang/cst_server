@@ -34,6 +34,3 @@ async def calculate_maxflow(data: StringData):
   else:
     maxFlow = int(maxFlow)
     return {"maxFlow": maxFlow}
-  
-# uvicorn main:app --host 0.0.0.0 --port 8000
-

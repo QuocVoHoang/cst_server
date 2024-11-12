@@ -29,5 +29,3 @@ def dinic_main_function(vehicle: str, start_location_name: str, end_location_nam
   print(f"Max flow from {start_location_name} to {end_location_name} is {result}")
   print(f"The dinic function runs in {total_function_time}s")
   return result
-
-dinic_main_function("bike", "AEON Mall Bình Tân", "Bệnh viện Nhi Đồng 1")
