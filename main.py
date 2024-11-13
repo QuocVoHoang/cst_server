@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from functions import dinic_main_function
+from dinic import dinic_main_function
 
 app = FastAPI()
 
@@ -22,12 +22,8 @@ class StringData(BaseModel):
 async def mock_get():
   return {"message": "Hello from FastAPI"}
 
-@app.get("/data")
-async def mock_get():
-  return {"message": "Hello from FastAPI"}
-
 @app.post("/")
-async def calculate_maxflow(data: StringData):
+async def calculate_maxflow(data: StringData):  
   maxFlow = dinic_main_function(
     vehicle=data.vehicle,
     start_location_name=data.start_location_name, 
@@ -38,3 +34,6 @@ async def calculate_maxflow(data: StringData):
   else:
     maxFlow = int(maxFlow)
     return {"maxFlow": maxFlow}
+  
+# uvicorn main:app --host 0.0.0.0 --port 8000
+
