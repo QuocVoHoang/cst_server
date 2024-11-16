@@ -98,4 +98,4 @@ def push_relabel_main_function(vehicle: str, start_location_name: str, end_locat
         max_flow_value = push_relabel.max_flow(source, sink)
         return max_flow_value
 
-print(push_relabel_main_function('bike', 'Sân bay Tân Sơn Nhất', 'Ngã tư Bảy Hiền'))
+# print(push_relabel_main_function('bike', 'Sân bay Tân Sơn Nhất', 'Ngã tư Bảy Hiền'))

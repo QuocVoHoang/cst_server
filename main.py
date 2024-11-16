@@ -24,16 +24,16 @@ async def mock_get():
 
 @app.post("/")
 async def calculate_maxflow(data: StringData):  
-  maxFlow = dinic_main_function(
+  maxFlow, all_paths = dinic_main_function(
     vehicle=data.vehicle,
     start_location_name=data.start_location_name, 
     end_location_name=data.end_location_name
   )
   if data.start_location_name == data.end_location_name: 
-    return {"maxFlow": 0}
+    return {"maxFlow": 0, 'allPaths': 0}
   else:
     maxFlow = int(maxFlow)
-    return {"maxFlow": maxFlow}
+    return {"maxFlow": maxFlow, 'allPaths': all_paths}
   
 # uvicorn main:app --host 0.0.0.0 --port 8000
 

@@ -97,4 +97,4 @@ def edmonds_karp_main_function(vehicle: str, start_location_name: str, end_locat
         
         return edmonds_karp
 
-print(edmonds_karp_main_function('bike', 'Sân bay Tân Sơn Nhất', 'Ngã tư Bảy Hiền'))
+# print(edmonds_karp_main_function('bike', 'Sân bay Tân Sơn Nhất', 'Ngã tư Bảy Hiền'))
